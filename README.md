@@ -12,19 +12,18 @@ Building a controlled virtual environment for cybersecurity learning, network an
 
 This project documents the setup of a virtual cybersecurity lab using **Kali Linux and Oracle VirtualBox**.
 
-The goal was to create a controlled environment where I can explore cybersecurity tools, understand network configurations, and practice security-related tasks without directly modifying my host operating system.
-
-This lab serves as the foundation for my hands-on cybersecurity learning journey and future practical projects.
+The goal was to create a controlled environment where i work out cybersecurity tools that enables me to test software without changing my host operating system. A private virtual network was configured and the connectivity was tested.
+This lab serves as the foundation for my hands on cybersecurity learning journey and future practical projects.
 
 ## 🎯 Project Objectives
 
 - Install and configure VirtualBox.
 - Set up Kali Linux as a virtual machine.
-- Configure the virtual machine's network settings.
-- Check network connectivity and DNS resolution.
-- Explore IP addressing and network configuration.
-- Prepare a virtual environment for future cybersecurity exercises.
-- Document the setup process and practical learning experience.
+- Configure the virtual machine's NAT Network settings.
+- Assign a consistent IP address to the kali VM.
+- Check network connectivity and DNS resolution .
+- Take a clean VM snapshot for recovery.
+- Documentation.
 
 ## 🏗️ Lab Architecture
 
@@ -43,9 +42,6 @@ The lab consists of a host computer running VirtualBox, with Kali Linux operatin
     Future Lab Machines
 ```
 
-Additional virtual machines can be added as the lab expands.
-
-> Note: The diagram represents the planned lab structure. Additional target machines have not been included in the current setup.
 
 ## ⚙️ Lab Configuration
 
@@ -53,21 +49,20 @@ Additional virtual machines can be added as the lab expands.
 |---|---|
 | Host Operating System | Windows 11 Pro |
 | Virtualization Software | Oracle VirtualBox |
-| Guest Operating System | Kali Linux |
+| Guest Operating System | Kali Linux 2026.3 |
 | Host RAM | 8 GB |
-| Host Storage | 256 GB SSD |
-| Virtual Network | [Your configured network mode] |
-| Kali Linux IP Address | [Your actual IP address] |
-| DNS Server | [Your configured DNS server] |
+| Network address | 10.0.0.0/24|
+| Virtual Network | NAT Network |
+| DNS Server |8.8.8.8|
 
-*Replace the bracketed values with your actual network configuration.*
+
 
 ## 🛠️ Tools & Technologies
 
 - **Kali Linux:** A Linux distribution designed for penetration testing and security auditing.
 - **VirtualBox:** Virtualization software used to run Kali Linux separately from the host operating system.
 - **Terminal:** Used to execute commands and inspect system and network information.
-- **NetworkManager:** Used to view and manage network connections in Kali Linux.
+  
 
 ## 🚀 Implementation Process
 
@@ -75,27 +70,17 @@ Additional virtual machines can be added as the lab expands.
 
 Installed Oracle VirtualBox on the host computer to create and manage virtual machines.
 
-### Step 2: Set Up Kali Linux
+### Step 2: Set Up and configuration of  Kali Linux
 
-Downloaded and configured Kali Linux as a virtual machine within VirtualBox.
+kali linus was downloaded and configured  as a virtual machine(guest oprating system)  within VirtualBox.
 
-### Step 3: Configure Virtual Machine Settings
+### Step 3: Create the NAT Network
+A NAT Network in virtualbox with the name: NATNetwork and IPV4 prefix: 10.0.0.0/24 was created
 
-Configured the virtual machine's resources and network adapter to support the lab environment.
+## step 4: create a clean VM snapshot
+After completing the initial configuration, a virtualBox snapshot was created
 
-### Step 4: Inspect Network Configuration
-
-Used Kali Linux terminal commands to examine network interfaces, IP addressing, routing, and DNS settings.
-
-Commands used:
-
-```bash
-ip addr
-ip route
-cat /etc/resolv.conf
-```
-
-### Step 5: Verify Network Connectivity
+### Step 4: Verify Network Connectivity
 
 Tested connectivity using:
 
@@ -106,15 +91,9 @@ ping -c 4 google.com
 
 The first command checks connectivity to an IP address, while the second also depends on DNS resolution.
 
-### Step 6: Prepare for Future Exercises
-
-Prepared the environment for future practical work involving network analysis, reconnaissance, vulnerability assessment, and other authorized cybersecurity exercises.
-
 ## 📸 Screenshots
 
-Screenshots documenting the setup can be added below.
-
-### 1. VirtualBox Configuration
+### 1. Nat Network onfiguration
 
 ![VirtualBox Configuration](screenshots/virtualbox-setup.png)
 
@@ -122,15 +101,12 @@ Screenshots documenting the setup can be added below.
 
 ![Kali Linux Desktop](screenshots/kali-desktop.png)
 
-### 3. Network Configuration
+### 3. virtualbox snapshot
 
 ![Network Configuration](screenshots/network-configuration.png)
 
-### 4. Connectivity Verification
 
-![Connectivity Test](screenshots/connectivity-test.png)
 
-*Replace these example image paths with your uploaded screenshots. If you have not captured them yet, remove these image entries until the files are available.*
 
 ## 💡 Key Learnings
 
