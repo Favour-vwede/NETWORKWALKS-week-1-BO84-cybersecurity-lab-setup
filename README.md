@@ -99,7 +99,7 @@ The first command checks connectivity to an IP address, while the second also de
 
 ### 2. Kali Linux Desktop
 
-![Kali Linux Desktop](screenshots/kali-desktop.png)
+![Kali Linux Desktop](Screenshots-kali-desktop.png.png)
 
 ### 3. virtualbox snapshot
 
