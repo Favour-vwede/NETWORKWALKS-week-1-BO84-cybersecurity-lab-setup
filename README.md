@@ -103,7 +103,7 @@ The first command checks connectivity to an IP address, while the second also de
 
 ### 3. virtualbox snapshot
 
-![Network Configuration](screenshots/network-configuration.png)
+![Network Configuration](Screenshots-vm-snapshot.png.png)
 
 
 
