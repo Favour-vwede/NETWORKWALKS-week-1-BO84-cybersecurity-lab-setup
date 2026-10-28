@@ -95,7 +95,7 @@ The first command checks connectivity to an IP address, while the second also de
 
 ### 1. Nat Network onfiguration
 
-![VirtualBox Configuration](screenshots/virtualbox-setup.png)
+![VirtualBox Configuration](screenshots-natnetwork.png.png)
 
 ### 2. Kali Linux Desktop
 
